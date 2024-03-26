@@ -21,7 +21,7 @@ user_input['q3'] = song_playlist
 # Menyimpan input ke file CSV ketika tombol 'Simpan' ditekan
 if st.button('Simpan'):
     # Menulis input ke file CSV
-    with open("D:/Alan/data.csv", mode='a', newline='', encoding='utf-8') as f:
+    with open("data.csv", mode='a', newline='', encoding='utf-8') as f:
         writer = csv.writer(f)
         # Menulis header jika file baru dibuat atau kosong
         if f.tell() == 0:
