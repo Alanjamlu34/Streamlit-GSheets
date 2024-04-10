@@ -13,7 +13,7 @@ st.markdown("<a href='https://youtu.be/bLvqoHBptjg?si=Ac2x8T3Ja8MSbecl'>FORRSET 
 st.markdown("<a href='https://youtu.be/PsD0NpFSADM?si=TsQE1K7PGEHFlL4m'>500 DAYS OF SUMMER</a>.</font>",unsafe_allow_html=True)
 
 st.title("Playlist")
-st.image('Data/lAGU.png')
+st.image('Data/lAGU.png', caption='John Mayer')
 st.markdown("Playlist <a href='https://open.spotify.com/playlist/3HwtZRMR0HqP5Hcb55pB4f?si=539b8ffbbaa64251'>STOP THIS TRAIN</a>.</font>",unsafe_allow_html=True)
 
 st.title("SEE ALL")
