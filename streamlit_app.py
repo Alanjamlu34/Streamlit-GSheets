@@ -21,7 +21,7 @@ st.sidebar.markdown("<font size='2'>View the code <a href='https://github.com/Al
 with st.form(key="Rekomendation_Form"):
     film = st.text_input(label="Rekomendasi film/series*")
     jenis = st.selectbox(label="Jenis", options=['Film','Series'], index=None)
-    opsi = st.date_input(label="Rilis tahun? Pilih tahunnya saja")
+    tahun = st.date_input(label="Rilis tahun? Pilih tahunnya saja", value=None, min_value=pd.to_datetime('1980-01-01').date(),max_value=pd.to_datetime('today').date())
     lagu = st.text_input(label="Rekomendasi lagu*")
     playlist = st.text_input(label="Playlist spotify/yt")
     tambahan = st.text_area(label='Tambahan')
@@ -35,10 +35,10 @@ with st.form(key="Rekomendation_Form"):
         if not film or not lagu:
             st.warning("Bagian film dan lagunya tolong diisi yah. hehe")
             st.stop()
-        elif existing_data['Film'].str.contains(film).any():
+        elif existing_data['Film'].astype(str).str.contains(film).any():
             st.warning('Film ini sudah pernah diisi. Ada film lain?')
             st.stop()
-        elif existing_data['Song'].str.contains(lagu).any():
+        elif existing_data['Song'].astype(str).str.contains(lagu).any():
             st.warning('Lagu ini sudah pernah diisi. Ada lagu lain?')
             st.stop()
         else:
@@ -47,7 +47,7 @@ with st.form(key="Rekomendation_Form"):
                     {
                         "Film": film,
                         'Jenis':jenis,
-                        'Film/Series' : opsi,
+                        'Tahun' : tahun,
                         'Song': lagu,                    
                         'Playlist': playlist,
                         'else': tambahan
