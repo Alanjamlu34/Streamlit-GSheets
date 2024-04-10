@@ -15,7 +15,7 @@ Cara Install dan Menjalankan Proyek
 Clone repositori ini:
 ```
 git clone https://github.com/Alanjamlu34/Streamlit-GSheets.git
-cd nama-repo
+cd Streamlit-GSheets
 ```
 ## Install dependensi:
 ```
