@@ -4,7 +4,6 @@ import pandas as pd
 
 st.set_page_config(page_title="Form", page_icon="🥳")
 st.header('Recommendation Form')
-st.sidebar.warning('Tabel butuh waktu lama untuk update 🙂\n sekitar 5 menit')
 # Create a connection object.
 conn = st.connection("gsheets", type=GSheetsConnection)
 
@@ -15,9 +14,6 @@ existing_data = conn.read(
     usecols=[0,1,2,3,4,5]
 )
 existing_data=existing_data.dropna(how="all")
-
-# sidebar
-st.sidebar.markdown("<font size='2'>View the code <a href='https://github.com/Alanjamlu34/streamlit_data_entry_form'>GitHub</a>.</font>",unsafe_allow_html=True)
 
 # input part
 with st.form(key="Rekomendation_Form"):
@@ -39,13 +35,13 @@ with st.form(key="Rekomendation_Form"):
     # pressed buttonl
     if submit_button:
         if not film and not lagu:
-            st.warning("Bagian film dan lagunya tolong diisi yah. hehe")
+            st.warning("Bagian film dan lagunya tolong diisi yah. hehe", icon="⚠️")
             st.stop()
         if not film :
-            st.warning("Bagian filmnya tolong diisi yah. hehe")
+            st.warning("Bagian filmnya tolong diisi yah. hehe", icon="⚠️")
             st.stop()
         if not lagu:
-            st.warning("Bagian lagunya tolong diisi yah. hehe")
+            st.warning("Bagian lagunya tolong diisi yah. hehe", icon="⚠️")
             st.stop()
         elif existing_data['Film'].astype(str).str.contains(film).any():
             st.warning('Film ini sudah pernah diisi. Ada film lain?')
@@ -74,5 +70,11 @@ with st.form(key="Rekomendation_Form"):
             # Update Google sheets
             conn.update(worksheet='Sheet1', data=updated_df)
             st.success("SUKSESS... Makasih", icon='😎')
+
+
+# SIDEBAR
 st.sidebar.subheader("3 Rekomendasi terakhir:")
 st.sidebar.dataframe(existing_data[['Film', 'Song']].tail(3))
+st.sidebar.warning('Tabel butuh waktu lama untuk update 🙂\n sekitar 5 menit')
+
+st.sidebar.markdown("<font size='2'>View the code <a href='https://github.com/Alanjamlu34/streamlit_data_entry_form'>GitHub</a>.</font>",unsafe_allow_html=True)
