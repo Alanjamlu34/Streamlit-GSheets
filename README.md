@@ -1,5 +1,7 @@
 # Streamlit for FUN: Membuat Multipage App dengan Integrasi Google Sheets
 !Streamlit for FUN
+Streamlit App
+https://rekomendasigess.streamlit.app/
 
 ## Deskripsi Proyek
 Proyek ini menggunakan Streamlit untuk membuat aplikasi multipage yang menyimpan input pengguna ke Google Sheets. Aplikasi ini memungkinkan pengguna memberikan rekomendasi film/series, lagu, playlist Spotify/YouTube, dan tambahan lainnya.
