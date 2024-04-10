@@ -22,7 +22,7 @@ pip install -r requirements.txt
 ```
 
 ## Jalankan aplikasi Streamlit:
-```streamlit run app.py```
+```streamlit run Form.py```
 
 Buka http://localhost:8501 di browser Anda.
 ## Kontribusi
