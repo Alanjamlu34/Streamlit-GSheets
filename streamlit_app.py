@@ -2,6 +2,7 @@ import streamlit as st
 from streamlit_gsheets import GSheetsConnection
 import pandas as pd
 
+st.set_page_config(page_title="Form", page_icon="🫡")
 # Create a connection object.
 conn = st.connection("gsheets", type=GSheetsConnection)
 
@@ -64,3 +65,8 @@ with st.form(key="Rekomendation_Form"):
             st.success("SUKSESS... Makasih", icon='😎')
 st.sidebar.subheader("Data yang Telah Dikirim:")
 st.sidebar.dataframe(existing_data[['Film', 'Song']].tail(4))
+
+
+# Page 2
+st.set_page_config(page_title="Mine", page_icon="😶‍🌫️")
+st.image('Streamlit-GSheets/Data/Film.png', caption='Favorite Film')
