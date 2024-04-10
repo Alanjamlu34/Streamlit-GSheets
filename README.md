@@ -13,7 +13,8 @@ Playlist Spotify/YouTube: Pengguna dapat memasukkan tautan playlist dari Spotify
 Tambahan: Pengguna dapat menambahkan catatan tambahan.
 Cara Install dan Menjalankan Proyek
 Clone repositori ini:
-```git clone https://github.com/username/nama-repo.git
+```
+git clone https://github.com/Alanjamlu34/Streamlit-GSheets.git
 cd nama-repo
 ```
 ## Install dependensi:
