@@ -13,6 +13,10 @@ existing_data = conn.read(
 )
 existing_data=existing_data.dropna(how="all")
 
+# sidebar
+st.header('Recommendation Form')
+st.sidebar.markdown("<font size='2'>View the code <a href='https://github.com/Alanjamlu34/streamlit_data_entry_form'>GitHub</a>.</font>", unsafe_allow_html=True)
+
 # input part
 with st.form(key="Rekomendation_Form"):
     film = st.text_input(label="Rekomendasi film/series*")
@@ -58,3 +62,5 @@ with st.form(key="Rekomendation_Form"):
             # Update Google sheets
             conn.update(worksheet='Sheet1', data=updated_df)
             st.success("SUKSESS... Makasih", icon='😎')
+st.sidebar.subheader("Data yang Telah Dikirim:")
+st.sidebar.dataframe(existing_data[['Film', 'Song']].tail(4))
