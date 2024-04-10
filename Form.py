@@ -4,14 +4,14 @@ import pandas as pd
 
 st.set_page_config(page_title="Form", page_icon="🥳")
 st.header('Recommendation Form')
-st.sidebar.success('Pilih "pages" di atas')
+st.sidebar.warning('Tabel butuh waktu lama untuk update 🙂\n sekitar 5 menit')
 # Create a connection object.
 conn = st.connection("gsheets", type=GSheetsConnection)
 
 # data
 existing_data = conn.read(
     worksheet="Sheet1",
-    ttl="10m",
+    ttl="0.1m",
     usecols=[0,1,2,3,4,5]
 )
 existing_data=existing_data.dropna(how="all")
