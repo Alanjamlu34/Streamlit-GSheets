@@ -25,7 +25,8 @@ with st.form(key="Rekomendation_Form"):
                           value=None, min_value=pd.to_datetime('1980-01-01').date(),
                           max_value=pd.to_datetime('today').date())
     lagu = st.text_input(label="Rekomendasi lagu*")
-    playlist = st.text_input(label="Link/Nama Playlist spotify/yt")
+    playlist = st.text_input(label="Playlist spotify/yt")
+    st.success('Link/Nama playlistnya kalau ada')
     tambahan = st.text_area(label='Tambahan APAPUN')
 
     st.markdown('**required*')
