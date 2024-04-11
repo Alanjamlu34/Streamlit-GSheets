@@ -10,7 +10,7 @@ conn = st.connection("gsheets", type=GSheetsConnection)
 # data
 existing_data = conn.read(
     worksheet="Sheet1",
-    ttl="0.1m",
+    ttl="20m",
     usecols=[0,1,2,3,4,5]
 )
 existing_data=existing_data.dropna(how="all")
@@ -25,8 +25,8 @@ with st.form(key="Rekomendation_Form"):
                           value=None, min_value=pd.to_datetime('1980-01-01').date(),
                           max_value=pd.to_datetime('today').date())
     lagu = st.text_input(label="Rekomendasi lagu*")
-    playlist = st.text_input(label="Playlist spotify/yt")
-    tambahan = st.text_area(label='Tambahan')
+    playlist = st.text_input(label="Link/Nama Playlist spotify/yt")
+    tambahan = st.text_area(label='Tambahan APAPUN')
 
     st.markdown('**required*')
 
