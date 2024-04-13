@@ -3,7 +3,8 @@ from streamlit_gsheets import GSheetsConnection
 import pandas as pd
 
 st.set_page_config(page_title="Form", page_icon="🥳")
-st.header('Recommendation Form')
+st.header('Recommendation Form (FILM/SERIES)')
+st.caption(':red[Isi aja. Data yang ngisi gk bakal disimpan]')
 # Create a connection object.
 conn = st.connection("gsheets", type=GSheetsConnection)
 
@@ -26,7 +27,7 @@ with st.form(key="Rekomendation_Form"):
                           max_value=pd.to_datetime('today').date())
     lagu = st.text_input(label="Rekomendasi lagu*")
     playlist = st.text_input(label="Playlist spotify/yt")
-    st.success('Link/Nama playlistnya kalau ada')
+    st.caption(':red[Link/Nama playlistnya kalau ada]')
     tambahan = st.text_area(label='Tambahan APAPUN')
 
     st.markdown('**required*')
