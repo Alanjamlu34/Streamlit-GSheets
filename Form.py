@@ -75,6 +75,7 @@ with st.form(key="Rekomendation_Form"):
 
 
 # SIDEBAR
+st.link_button('Buka tab', 'https://rekomendasigess.streamlit.app/Mine')
 st.sidebar.subheader("3 Rekomendasi terakhir:")
 st.sidebar.dataframe(existing_data[['Film', 'Song']].tail(3))
 st.sidebar.warning('Tabel butuh waktu untuk update 🙂\n sekitar 5 menit')
