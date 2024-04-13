@@ -81,3 +81,13 @@ st.sidebar.dataframe(existing_data[['Film', 'Song']].tail(3))
 st.sidebar.warning('Tabel butuh waktu untuk update 🙂\n sekitar 5 menit')
 
 st.sidebar.markdown("<font size='2'>View the code <a href='https://github.com/Alanjamlu34/Streamlit-GSheets.git'>GitHub</a>.</font>",unsafe_allow_html=True)
+
+# ---- HIDE STREAMLIT STYLE ----
+hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)
