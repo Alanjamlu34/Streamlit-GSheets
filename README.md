@@ -31,7 +31,8 @@ Buka http://localhost:8501 di browser Anda.
 Lihat hasil Project dengan [Buka Link](https://dashboard-bike-datasetgit-hilfqcu8gkvdtej3vzeo6p.streamlit.app/).
 >[!NOTE]
 > Preview App
-![image](https://github.com/Alanjamlu34/Streamlit-GSheets/assets/142156489/0300a6f9-f4e9-43fb-af33-1e7c5530b2db)
+![image](https://github.com/Alanjamlu34/Streamlit-GSheets/assets/142156489/7644f4a1-873f-4880-ab9b-35eb6c255ac5)
+
 
 
 ## Kontribusi
