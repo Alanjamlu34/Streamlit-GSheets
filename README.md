@@ -28,7 +28,7 @@ pip install -r requirements.txt
 Buka http://localhost:8501 di browser Anda.
 
 ## Buka Streamlit APP
-Lihat hasil Project dengan [Buka Link](https://dashboard-bike-datasetgit-hilfqcu8gkvdtej3vzeo6p.streamlit.app/).
+Lihat hasil Project dengan [Buka Link](https://rekomendasigess.streamlit.app/).
 >[!NOTE]
 > Preview App
 ![image](https://github.com/Alanjamlu34/Streamlit-GSheets/assets/142156489/7644f4a1-873f-4880-ab9b-35eb6c255ac5)
