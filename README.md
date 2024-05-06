@@ -26,6 +26,14 @@ pip install -r requirements.txt
 ```streamlit run Form.py```
 
 Buka http://localhost:8501 di browser Anda.
+
+## Buka Streamlit APP
+Lihat hasil Project dengan [Buka Link](https://dashboard-bike-datasetgit-hilfqcu8gkvdtej3vzeo6p.streamlit.app/).
+>[!NOTE]
+> Preview App
+![image](https://github.com/Alanjamlu34/Streamlit-GSheets/assets/142156489/0300a6f9-f4e9-43fb-af33-1e7c5530b2db)
+
+
 ## Kontribusi
 Jika Anda ingin berkontribusi, silakan buat pull request ke repositori ini.
 
