@@ -17,12 +17,14 @@ Clone repositori ini:
 git clone https://github.com/Alanjamlu34/Streamlit-GSheets.git
 cd Streamlit-GSheets
 ```
+ganti `Streamlit-GSheets` dengan path directory anda
 ## Install dependensi:
 ```
 pip install -r requirements.txt
 ```
 
 ## Jalankan aplikasi Streamlit:
+jalankan file `Form.py`, lalu buka terminal anda dan jalankan perintah berikut
 ```
 streamlit run Form.py
 ```
