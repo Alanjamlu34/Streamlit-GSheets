@@ -71,7 +71,7 @@ with st.form(key="Rekomendation_Form"):
             
             # Update Google sheets
             conn.update(worksheet='Sheet1', data=updated_df)
-            st.success("SUKSESS... Makasih", icon='😎')
+            st.success("SUKSESS... Makaseeehh bang", icon='😎')
 
 
 # SIDEBAR
